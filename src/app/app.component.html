@@ -1,0 +1,15 @@
+<div >
+  <input type="text" [(ngModel)]="input_data">
+</div>
+<div>
+  <ul>
+    @for (item of affich; track $index) {
+      <div style="display: flex; flex-direction: row; gap: 10px;"><li>{{item}}</li> <button (click)="supprimer(item)">Supprimer</button></div>
+    }
+  </ul>
+  <button (click)="add()">Add to list</button>
+  <input type="button" [(ngModel)]="mode" (click)="change()"  [value]="mode">
+  <button (click)="afficher()">Afficher</button>
+
+
+</div>
